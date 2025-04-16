@@ -45,4 +45,5 @@ dependencies {
     implementation("com.google.firebase:firebase-analytics:22.4.0")
     implementation("com.google.firebase:firebase-auth:23.2.0")
     implementation("com.google.firebase:firebase-firestore:25.1.3")
+    implementation ("androidx.gridlayout:gridlayout:1.1.0")
 }

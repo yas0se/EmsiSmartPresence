@@ -2,6 +2,7 @@ package com.example.emsismartpresence;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.text.InputType;
 import android.view.View;
@@ -15,6 +16,7 @@ import com.google.firebase.auth.FirebaseAuth;
 public class Signin extends AppCompatActivity {
 
     private EditText etEmail, etPassword;
+    private String name;
     private Button btnLogin;
     private ImageButton btnTogglePassword;
     private boolean isPasswordVisible = false;
@@ -52,7 +54,7 @@ public class Signin extends AppCompatActivity {
             }
         });
 
-        String name = getIntent().getStringExtra("name");
+        name = getIntent().getStringExtra("name");
         // Affichage simple
         Toast.makeText(this, "Bienvenue: " + name,
                 Toast.LENGTH_SHORT).show();
@@ -90,6 +92,10 @@ public class Signin extends AppCompatActivity {
                 .addOnCompleteListener(this, task -> {
                     if(task.isSuccessful()) {
                         Toast.makeText(this, "Connexion réussie!",Toast.LENGTH_SHORT).show();
+                        Intent i=new Intent(Signin.this, MainActivity.class);
+                        i.putExtra("name", name);
+                        startActivity(i);
+                        finish();
                     }else {
                         Toast.makeText(this, "Erreur: "+ task.getException().getMessage(),Toast.LENGTH_SHORT).show();
                     }

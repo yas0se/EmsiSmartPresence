@@ -13,6 +13,9 @@
         android:theme="@style/Theme.EmsiSmartPresence"
         tools:targetApi="31">
         <activity
+            android:name=".MainActivity"
+            android:exported="false" />
+        <activity
             android:name=".Signin"
             android:exported="false" />
         <activity
@@ -24,6 +27,7 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
         <meta-data
             android:name="android.security.net.config"
             android:resource="@xml/network_security_config" />
