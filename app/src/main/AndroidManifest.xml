@@ -13,10 +13,10 @@
         android:theme="@style/Theme.EmsiSmartPresence"
         tools:targetApi="31">
         <activity
-            android:name=".Register"
+            android:name=".Signin"
             android:exported="false" />
         <activity
-            android:name=".Signin"
+            android:name=".Register"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

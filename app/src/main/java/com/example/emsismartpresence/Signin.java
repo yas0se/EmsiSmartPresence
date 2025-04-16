@@ -51,6 +51,11 @@ public class Signin extends AppCompatActivity {
                 authenticateUser();
             }
         });
+
+        String name = getIntent().getStringExtra("name");
+        // Affichage simple
+        Toast.makeText(this, "Bienvenue: " + name,
+                Toast.LENGTH_SHORT).show();
     }
 
     private void togglePasswordVisibility() {
