@@ -20,7 +20,6 @@ public class Rattrapages extends AppCompatActivity {
 
         listRattrapages = findViewById(R.id.list_rattrapages);
 
-        // Exemple de données dynamiques simulées
         List<String> rattrapages = Arrays.asList(
                 "Lundi 3 Juin - SC32 - 10:00 à 12:00",
                 "Jeudi 6 Juin - LI1 - 14:00 à 16:00",

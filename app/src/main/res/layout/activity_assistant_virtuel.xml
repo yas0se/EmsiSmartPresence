@@ -3,25 +3,55 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:orientation="vertical"
-    android:padding="16dp"
+    android:padding="24dp"
+    android:background="#F5F5F5"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    tools:context=".assistant_virtuel">
 
-    <EditText
-        android:id="@+id/prompt"
-        android:hint="Write your prompt here.."
-        android:layout_width="match_parent"
-        android:layout_height="48sp" />
-    <Button
-        android:id="@+id/btnSend"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="10dp"
-        android:text="Envoyer"
-        android:layout_gravity="end"/>
+    <!-- Titre -->
     <TextView
         android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Assistant Virtuel"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:textColor="@color/purple_500"
+        android:layout_gravity="center"
+        android:layout_marginBottom="16dp"/>
+
+    <!-- Champ de saisie -->
+    <EditText
+        android:id="@+id/prompt"
+        android:hint="Écrivez votre demande ici..."
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="12dp"
+        android:background="@drawable/edittext_background"
+        android:textColor="#000"
+        android:textSize="16sp"
+        android:layout_marginBottom="12dp"/>
+
+    <!-- Bouton Envoyer -->
+    <Button
+        android:id="@+id/btnSend"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Envoyer"
+        android:backgroundTint="#2196F3"
+        android:textColor="#FFF"
+        android:textStyle="bold"
+        android:layout_marginBottom="16dp"/>
+
+    <!-- Réponse de l'assistant -->
+    <TextView
         android:id="@+id/geminianswer"
-        android:layout_height="wrap_content"/>
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="12dp"
+        android:background="#E0F7FA"
+        android:textColor="#000"
+        android:textSize="16sp"
+        android:layout_marginTop="8dp"/>
 
 </LinearLayout>

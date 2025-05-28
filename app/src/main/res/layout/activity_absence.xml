@@ -17,11 +17,22 @@
             android:layout_height="wrap_content"
             android:padding="16dp">
 
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Absence"
+                android:textSize="24sp"
+                android:textColor="@color/purple_500"
+                android:textStyle="bold"
+                android:layout_gravity="center"
+                android:layout_marginTop="20dp" />
+
             <Spinner
                 android:id="@+id/spinner_filiere"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginBottom="8dp" />
+                android:layout_marginBottom="8dp"
+                android:paddingTop="10dp"/>
 
             <!-- Sélection du site -->
             <Spinner

@@ -48,10 +48,26 @@ public class MainActivity extends AppCompatActivity {
             }
         }
 
+        card1.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(MainActivity.this, Documents.class);
+                startActivity(intent);
+            }
+        });
+
         card2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(MainActivity.this, Absence.class);
+                startActivity(intent);
+            }
+        });
+
+        card3.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(MainActivity.this, Rattrapages.class);
                 startActivity(intent);
             }
         });
