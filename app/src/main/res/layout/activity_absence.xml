@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Absence">
+
+    <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="16dp">
+
+            <Spinner
+                android:id="@+id/spinner_filiere"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp" />
+
+            <!-- Sélection du site -->
+            <Spinner
+                android:id="@+id/spinner_site"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp" />
+
+            <!-- Sélection du groupe -->
+            <Spinner
+                android:id="@+id/spinner_groupe"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp" />
+
+            <!-- Date -->
+            <EditText
+                android:id="@+id/edit_date"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Date (ex: 28/05/2025)"
+                android:inputType="date" />
+
+            <!-- Liste des étudiants -->
+            <ListView
+                android:id="@+id/list_etudiants"
+                android:layout_width="match_parent"
+                android:layout_height="300dp"
+                android:dividerHeight="1dp"
+                android:layout_marginTop="12dp" />
+
+            <!-- Remarque -->
+            <EditText
+                android:id="@+id/edit_remarque"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Remarques"
+                android:layout_marginTop="8dp"
+                android:minLines="2" />
+
+            <!-- Bouton valider -->
+            <Button
+                android:id="@+id/btn_valider"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Valider les absences"
+                android:layout_marginTop="12dp" />
+
+        </LinearLayout>
+    </ScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

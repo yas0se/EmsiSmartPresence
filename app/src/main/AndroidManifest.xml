@@ -18,6 +18,18 @@
         android:theme="@style/Theme.EmsiSmartPresence"
         tools:targetApi="31">
         <activity
+            android:name=".Rattrapages"
+            android:exported="false" />
+        <activity
+            android:name=".Documents"
+            android:exported="false" />
+        <activity
+            android:name=".Absence"
+            android:exported="false" />
+        <activity
+            android:name=".AjouterEtudiant"
+            android:exported="false" />
+        <activity
             android:name=".EmploiDeTemp"
             android:exported="false" />
 

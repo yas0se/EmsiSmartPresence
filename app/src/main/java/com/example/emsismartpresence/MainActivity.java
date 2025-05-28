@@ -48,6 +48,13 @@ public class MainActivity extends AppCompatActivity {
             }
         }
 
+        card2.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(MainActivity.this, Absence.class);
+                startActivity(intent);
+            }
+        });
 
         card4.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -61,6 +68,14 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(MainActivity.this, Maps.class);
+                startActivity(intent);
+            }
+        });
+
+        card6.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(MainActivity.this, AjouterEtudiant.class);
                 startActivity(intent);
             }
         });
