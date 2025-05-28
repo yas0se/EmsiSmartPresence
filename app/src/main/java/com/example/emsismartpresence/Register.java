@@ -8,6 +8,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.google.android.gms.tasks.OnFailureListener;
@@ -24,6 +25,7 @@ import java.util.Map;
 public class Register extends AppCompatActivity {
 
     private EditText etEmail, etPassword, etConfirmePassword, etName;
+    private TextView Tologin;
     private Button btnRegister;
     private final String validEmail = "user@example.com";
     private final String validPassword = "123456";
@@ -41,6 +43,14 @@ public class Register extends AppCompatActivity {
         etConfirmePassword = findViewById(R.id.et_confirm_password);
         btnRegister = findViewById(R.id.btn_Register);
         etName = findViewById(R.id.name);
+        Tologin = findViewById(R.id.Tologin);
+        Tologin.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                goTologin(v);
+
+            }
+        });
 
 
 // Gestion du clic sur le bouton
@@ -50,6 +60,12 @@ public class Register extends AppCompatActivity {
                 registerUser();
             }
         });
+
+
+    }
+    public void goTologin(View view) {
+        Intent intent = new Intent(this, Signin.class);
+        startActivity(intent);
     }
 
     private void registerUser() {

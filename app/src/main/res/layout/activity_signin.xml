@@ -75,6 +75,7 @@
         android:layout_marginTop="20dp"/>
 
     <TextView
+        android:id="@+id/ToRegister"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Don't have account?Register"

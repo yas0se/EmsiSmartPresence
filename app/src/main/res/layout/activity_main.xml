@@ -117,7 +117,7 @@
                     </LinearLayout>
                 </androidx.cardview.widget.CardView>
                 <androidx.cardview.widget.CardView
-                    android:id="@+id/history"
+                    android:id="@+id/card3"
                     android:layout_width="150dp"
                     android:layout_height="150dp"
                     android:layout_margin="10dp"
@@ -148,7 +148,7 @@
                     </LinearLayout>
                 </androidx.cardview.widget.CardView>
                 <androidx.cardview.widget.CardView
-                    android:id="@+id/card6"
+                    android:id="@+id/card4"
                     android:layout_width="150dp"
                     android:layout_height="150dp"
                     android:layout_margin="10dp"
@@ -210,7 +210,7 @@
                     </LinearLayout>
                 </androidx.cardview.widget.CardView>
                 <androidx.cardview.widget.CardView
-                    android:id="@+id/card7"
+                    android:id="@+id/card6"
                     android:layout_width="150dp"
                     android:layout_height="150dp"
                     android:layout_margin="10dp"
@@ -241,7 +241,7 @@
                     </LinearLayout>
                 </androidx.cardview.widget.CardView>
                 <androidx.cardview.widget.CardView
-                    android:id="@+id/cardStats"
+                    android:id="@+id/card7"
                     android:layout_width="150dp"
                     android:layout_height="150dp"
                     android:layout_margin="10dp"
@@ -258,13 +258,13 @@
                         <ImageView
                             android:layout_width="100dp"
                             android:layout_height="100dp"
-                            android:src="@drawable/document"
+                            android:src="@drawable/gemini"
                             android:layout_gravity="center_horizontal|center_vertical" />
 
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="Statistiques"
+                            android:text="Ask Geminie"
                             android:textSize="15sp"
                             android:layout_gravity="center_horizontal"
                             android:textStyle="bold" />

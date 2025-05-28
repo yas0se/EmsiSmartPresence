@@ -9,13 +9,18 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageButton;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.google.firebase.auth.FirebaseAuth;
 
 public class Signin extends AppCompatActivity {
 
+    //login: e@e.com
+    //password: 123456
+
     private EditText etEmail, etPassword;
+    private TextView ToRegister;
     private String name;
     private Button btnLogin;
     private ImageButton btnTogglePassword;
@@ -35,6 +40,15 @@ public class Signin extends AppCompatActivity {
         etPassword = findViewById(R.id.et_password);
         btnLogin = findViewById(R.id.btn_login);
         btnTogglePassword = findViewById(R.id.btn_toggle_password);
+
+        ToRegister = findViewById(R.id.ToRegister);
+        ToRegister.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                goToRegister(v);
+
+            }
+        });
 
         // Set up password toggle
         btnTogglePassword.setOnClickListener(new View.OnClickListener() {
@@ -58,6 +72,10 @@ public class Signin extends AppCompatActivity {
         // Affichage simple
         Toast.makeText(this, "Bienvenue: " + name,
                 Toast.LENGTH_SHORT).show();
+    }
+    public void goToRegister(View view) {
+        Intent intent = new Intent(this, Register.class);
+        startActivity(intent);
     }
 
     private void togglePasswordVisibility() {
