@@ -34,11 +34,10 @@ public class EtudiantAdapter extends ArrayAdapter<Etudiant> {
         checkedTextView.setText(etudiant.getNom());
         checkedTextView.setChecked(!etudiant.isAbsent());
 
-        // Toggle absence state on click
         checkedTextView.setOnClickListener(v -> {
             boolean isChecked = !checkedTextView.isChecked();
             checkedTextView.setChecked(isChecked);
-            etudiant.setAbsent(!isChecked); // absent = !present
+            etudiant.setAbsent(!isChecked); 
         });
 
         return convertView;

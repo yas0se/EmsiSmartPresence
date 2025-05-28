@@ -215,12 +215,10 @@ public class Absence extends AppCompatActivity {
         listViewEtudiants = findViewById(R.id.list_etudiants);
         btnValider = findViewById(R.id.btn_valider);
 
-        // Simuler données pour les spinners
         spFiliere.setAdapter(new ArrayAdapter<>(this, android.R.layout.simple_spinner_dropdown_item, new String[]{"4IIR", "3IIR", "5IIR"}));
         spSite.setAdapter(new ArrayAdapter<>(this, android.R.layout.simple_spinner_dropdown_item, new String[]{"Centre", "Site A", "Site B"}));
         spGroupe.setAdapter(new ArrayAdapter<>(this, android.R.layout.simple_spinner_dropdown_item, new String[]{"G 01", "G 02", "G 03"}));
 
-        // Simuler une liste fixe d’étudiants
         etudiantList = new ArrayList<>();
         etudiantList.add(new Etudiant("1", "Etudiant C1", false));
         etudiantList.add(new Etudiant("2", "Etudiant C2", false));
@@ -232,7 +230,6 @@ public class Absence extends AppCompatActivity {
         etudiantList.add(new Etudiant("8", "Etudiant C8", false));
         etudiantList.add(new Etudiant("9", "Etudiant C9", false));
 
-        // Affichage avec adapter custom
         adapter = new EtudiantAdapter(this, etudiantList);
         listViewEtudiants.setAdapter(adapter);
 

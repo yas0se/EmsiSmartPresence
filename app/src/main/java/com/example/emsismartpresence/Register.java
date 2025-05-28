@@ -37,7 +37,7 @@ public class Register extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_register);
         mAuth = FirebaseAuth.getInstance();
-// Récupération des éléments UI
+
         etEmail = findViewById(R.id.et_email);
         etPassword = findViewById(R.id.et_password);
         etConfirmePassword = findViewById(R.id.et_confirm_password);
@@ -53,7 +53,7 @@ public class Register extends AppCompatActivity {
         });
 
 
-// Gestion du clic sur le bouton
+
         btnRegister.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

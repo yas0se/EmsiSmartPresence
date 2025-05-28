@@ -39,7 +39,7 @@ public class Maps extends AppCompatActivity implements OnMapReadyCallback {
     public void onMapReady(@NonNull GoogleMap googleMap) {
 
         gMap = googleMap;
-        LatLng ultraPC = new LatLng(33.58931956959172, -7.605327086230895);  // Coord approximative
+        LatLng ultraPC = new LatLng(33.58931956959172, -7.605327086230895);  
         gMap.addMarker(new MarkerOptions().position(ultraPC).title("Marqueur à emsi centre"));
         gMap.moveCamera(CameraUpdateFactory.newLatLngZoom(ultraPC, 14));
 
