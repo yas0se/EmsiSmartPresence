@@ -20,9 +20,6 @@ import androidx.cardview.widget.CardView;
 public class MainActivity extends AppCompatActivity {
 
     TextView adminName;
-    CardView card5;
-    CardView card7;
-
 
     @SuppressLint("MissingInflatedId")
     @Override
@@ -32,7 +29,12 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         adminName = findViewById(R.id.dashboard_adminName);
+        CardView card1 = findViewById(R.id.card1);
+        CardView card2 = findViewById(R.id.card2);
+        CardView card3 = findViewById(R.id.card3);
+        CardView card4 = findViewById(R.id.card4);
         CardView card5 = findViewById(R.id.card5);
+        CardView card6 = findViewById(R.id.card6);
         CardView card7 = findViewById(R.id.card7);
 
         FirebaseUser user = FirebaseAuth.getInstance().getCurrentUser();
@@ -45,6 +47,16 @@ public class MainActivity extends AppCompatActivity {
                 adminName.setText("Mr/Mme " + email);
             }
         }
+
+
+        card4.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(MainActivity.this, EmploiDeTemp.class);
+                startActivity(intent);
+            }
+        });
+
         card5.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
